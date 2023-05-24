@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CD75FBDB-E8C6-495F-B979-CE9684C30308}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>_23_EL_Exhibition_Charger</RootNamespace>
+    <AssemblyName>23_EL_Exhibition_Charger</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DrakeUI.Framework, Version=1.3.5.0, Culture=neutral, PublicKeyToken=32bd1f5d97424e1c, processorArchitecture=MSIL">
+      <HintPath>..\packages\DrakeUI.Framework.1.3.5\lib\net45\DrakeUI.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common.cs" />
+    <Compile Include="Common\ButtonManager.cs" />
+    <Compile Include="Common\CsDefine.cs" />
+    <Compile Include="Common\CsUtil.cs" />
+    <Compile Include="Common\CustomLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="frmChargeCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChargeCheck.Designer.cs">
+      <DependentUpon>frmChargeCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCharging.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCharging.Designer.cs">
+      <DependentUpon>frmCharging.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmComplete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmComplete.Designer.cs">
+      <DependentUpon>frmComplete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfig.Designer.cs">
+      <DependentUpon>frmConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConnJoin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConnJoin.Designer.cs">
+      <DependentUpon>frmConnJoin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConnRelease.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConnRelease.Designer.cs">
+      <DependentUpon>frmConnRelease.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessage.Designer.cs">
+      <DependentUpon>frmMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectMember.Designer.cs">
+      <DependentUpon>frmSelectMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTouchScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTouchScreen.Designer.cs">
+      <DependentUpon>frmTouchScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmChargeCheck.resx">
+      <DependentUpon>frmChargeCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCharging.resx">
+      <DependentUpon>frmCharging.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmComplete.resx">
+      <DependentUpon>frmComplete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConfig.resx">
+      <DependentUpon>frmConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConnJoin.resx">
+      <DependentUpon>frmConnJoin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConnRelease.resx">
+      <DependentUpon>frmConnRelease.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessage.resx">
+      <DependentUpon>frmMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectMember.resx">
+      <DependentUpon>frmSelectMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTouchScreen.resx">
+      <DependentUpon>frmTouchScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p1080_1920_ad_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wev02_img_background_touch_screen1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 255.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wev02_img_icon_charging_unit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wev02_img_icon_chargerinfor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wev02_img_icon_chargerinfor1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wev02_img_btn_back_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wev02_img_btn_home_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wev02_img_btn_back_normal_clicked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wev02_img_btn_home_clicked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wev02_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wev02_vertical_img_btn_membertype_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wev02_vertical_img_btn_membertype_clicked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wev02_vertical_img_btn_membertype_clicked1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wev02_vertical_img_btn_membertype_clicked2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wev02_img_icon_progress_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wev02_vertical_img_btn_membertype_normal1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wev02_horizontal_img_btn_membertype_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wev02_horizontal_img_btn_membertype_clicked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wev02_img_icon_progress_00.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wev02_img_icon_progress_03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wev02_img_icon_progress_04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wev02_img_icon_progress_05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wev02_img_icon_progress_02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wev02_img_icon_inlet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wev02_img_progress_connectconnector_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wev02_img_progress_connectconnector_02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wev02_img_progress_connectconnector_03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wev02_img_progress_connectconnector_04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wev02_img_gun_j1772.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wev02_img_icon_charging_amount.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wev02_img_icon_chargingspeed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wev02_img_icon_time.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\we02_img_btn_charginstop_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\we02_img_btn_charginstop_click1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\we02_img_btn_charginstop_click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wev02_img_icon_disconnectconnector_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wev02_img_icon_disconnectconnector_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wev02_img_icon_disconnectconnector_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wev02_img_icon_disconnectconnector_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wev02_img_progress_disconnectconnector_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wev02_img_progress_disconnectconnector_02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wev02_img_progress_disconnectconnector_03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wev02_img_progress_disconnectconnector_04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wev02_img_logo_usecomplete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p1080_1920_ad_02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p1080_1920_ad_03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p1080_1920_ad_04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p1080_1920_ad_05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p1080_1920_ad_06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
